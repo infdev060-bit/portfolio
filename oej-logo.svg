@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 240" width="520" height="240">
+  <defs>
+    <!-- Deep Indigo Background -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0b29"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#1a1344"/>
+    </linearGradient>
+
+    <!-- Glowing Neon Cyan -->
+    <linearGradient id="cyanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+
+    <!-- Electric Blue Gradient -->
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+
+    <!-- Mixed Neon Gradient -->
+    <linearGradient id="neonMix" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glowCyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowCyanStrong" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur1"/>
+      <feGaussianBlur stdDeviation="14" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowBlue" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle Grid Pattern -->
+    <pattern id="gridPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#312e81" stroke-width="0.4" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Deep Indigo Background -->
+  <rect width="520" height="240" rx="28" fill="url(#bgGradient)"/>
+  <rect width="520" height="240" rx="28" fill="url(#gridPattern)"/>
+
+  <!-- Radial glow backdrop -->
+  <ellipse cx="150" cy="120" rx="110" ry="90" fill="#38bdf8" opacity="0.06" filter="url(#glowBlue)"/>
+  <ellipse cx="380" cy="130" rx="120" ry="100" fill="#2563eb" opacity="0.06" filter="url(#glowBlue)"/>
+
+  <!-- ====== GROUP: MONOGRAM + BRAND ====== -->
+  <g transform="translate(40, 0)">
+
+    <!-- ========== MONOGRAM SHIELD FRAME (Web Dev Brackets vibe) ========== -->
+    <g transform="translate(0, 35)">
+      <!-- Left bracket < -->
+      <path d="M 14 40 L 58 6 L 58 18 L 26 40 L 58 62 L 58 74 L 14 40 Z"
+            fill="none" stroke="url(#neonMix)" stroke-width="2.5" stroke-linejoin="round"
+            filter="url(#glowCyan)" opacity="0.95"/>
+
+      <!-- Right bracket > -->
+      <path d="M 146 40 L 102 6 L 102 18 L 134 40 L 102 62 L 102 74 L 146 40 Z"
+            fill="none" stroke="url(#neonMix)" stroke-width="2.5" stroke-linejoin="round"
+            filter="url(#glowCyan)" opacity="0.95"/>
+    </g>
+
+    <!-- ========== O — Workflow Node Circle (n8n) ========== -->
+    <g transform="translate(52, 43)">
+      <!-- Outer ring (workflow node style) -->
+      <circle cx="56" cy="50" r="43" fill="none" stroke="url(#cyanGradient)" stroke-width="2.8"
+              filter="url(#glowCyan)" opacity="0.9"/>
+      <!-- Inner subtle ring -->
+      <circle cx="56" cy="50" r="34" fill="none" stroke="url(#blueGradient)" stroke-width="1.5"
+              stroke-dasharray="2 4" opacity="0.6"/>
+      <!-- Core letter O (thick geometric) -->
+      <circle cx="56" cy="50" r="22" fill="none" stroke="#38bdf8" stroke-width="5.5"
+              stroke-linecap="round" filter="url(#glowCyanStrong)"/>
+      <!-- n8n-style node pins (4 dots) -->
+      <circle cx="56" cy="11" r="3.2" fill="#38bdf8" filter="url(#glowCyan)"/>
+      <circle cx="56" cy="89" r="3.2" fill="#38bdf8" filter="url(#glowCyan)"/>
+      <circle cx="17" cy="50" r="3.2" fill="#2563eb" filter="url(#glowBlue)"/>
+      <circle cx="95" cy="50" r="3.2" fill="#2563eb" filter="url(#glowBlue)"/>
+    </g>
+
+    <!-- ========== E — Geometric Angular (Code Structure) ========== -->
+    <g transform="translate(123, 54)" filter="url(#glowCyan)">
+      <!-- E main vertical stem -->
+      <line x1="10" y1="0" x2="10" y2="78" stroke="url(#neonMix)" stroke-width="5.2" stroke-linecap="round"/>
+      <!-- E top bar -->
+      <line x1="10" y1="3" x2="55" y2="3" stroke="url(#cyanGradient)" stroke-width="5.2" stroke-linecap="round"/>
+      <!-- E middle bar -->
+      <line x1="10" y1="40" x2="48" y2="40" stroke="url(#neonMix)" stroke-width="5.2" stroke-linecap="round"/>
+      <!-- E bottom bar -->
+      <line x1="10" y1="77" x2="55" y2="77" stroke="url(#cyanGradient)" stroke-width="5.2" stroke-linecap="round"/>
+      <!-- Code/AI circuit notch dots at end of bars -->
+      <circle cx="56" cy="3" r="3" fill="#38bdf8" filter="url(#glowCyan)"/>
+      <circle cx="49" cy="40" r="3" fill="#2563eb" filter="url(#glowBlue)"/>
+      <circle cx="56" cy="77" r="3" fill="#38bdf8" filter="url(#glowCyan)"/>
+    </g>
+
+    <!-- ========== J — Flowing Curve + Neural Tail (AI) ========== -->
+    <g transform="translate(191, 54)">
+      <!-- J top vertical -->
+      <line x1="10" y1="3" x2="10" y2="58" stroke="url(#neonMix)" stroke-width="5.2" stroke-linecap="round"
+            filter="url(#glowCyan)"/>
+      <!-- J curved tail flowing (neural network axon vibe) -->
+      <path d="M 10 58 C 10 74, 10 82, 26 82 C 42 82, 46 76, 48 66"
+            fill="none" stroke="url(#blueGradient)" stroke-width="5.2" stroke-linecap="round"
+            filter="url(#glowCyanStrong)"/>
+      <!-- AI Neural nodes along the curve -->
+      <circle cx="10" cy="3" r="3.2" fill="#38bdf8" filter="url(#glowCyan)"/>
+      <circle cx="10" cy="58" r="2.6" fill="#22d3ee" filter="url(#glowCyan)"/>
+      <circle cx="28" cy="82" r="2.6" fill="#2563eb" filter="url(#glowBlue)"/>
+      <circle cx="48" cy="66" r="3.4" fill="#6366f1" filter="url(#glowBlue)"/>
+      <!-- Small AI synaptic spark lines -->
+      <line x1="48" y1="66" x2="58" y2="56" stroke="#67e8f9" stroke-width="1.2" stroke-linecap="round"
+            filter="url(#glowCyan)" opacity="0.85"/>
+      <line x1="48" y1="66" x2="58" y2="62" stroke="#6366f1" stroke-width="1.2" stroke-linecap="round"
+            filter="url(#glowBlue)" opacity="0.85"/>
+      <line x1="48" y1="66" x2="56" y2="72" stroke="#38bdf8" stroke-width="1.2" stroke-linecap="round"
+            filter="url(#glowCyan)" opacity="0.7"/>
+    </g>
+
+    <!-- ========== CONNECTOR WORKFLOW LINKS (n8n automation) ========== -->
+    <g opacity="0.85">
+      <!-- O → E connector -->
+      <path d="M 206 94 C 215 94, 218 94, 225 94"
+            fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round"
+            filter="url(#glowBlue)"/>
+      <!-- Small mid node -->
+      <circle cx="215" cy="94" r="2.4" fill="#38bdf8" filter="url(#glowCyan)"/>
+      <!-- E → J connector -->
+      <path d="M 286 94 C 292 94, 296 94, 302 94"
+            fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round"
+            filter="url(#glowBlue)"/>
+      <circle cx="294" cy="94" r="2.4" fill="#2563eb" filter="url(#glowBlue)"/>
+    </g>
+
+    <!-- ========== CENTRAL AI / NEURAL CROSS DOT (Triple meaning symbol) ========== -->
+    <g transform="translate(176, 94)">
+      <circle r="4.6" fill="url(#neonMix)" filter="url(#glowCyanStrong)"/>
+      <circle r="8.5" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.6"
+              filter="url(#glowCyan)"/>
+      <circle r="12.5" fill="none" stroke="#2563eb" stroke-width="0.6" opacity="0.4"
+              filter="url(#glowBlue)"/>
+    </g>
+
+    <!-- ========== BRAND NAME ========== -->
+    <g transform="translate(290, 55)">
+      <!-- Oussama -->
+      <text x="0" y="40" font-family="'Inter', 'Segoe UI', system-ui, sans-serif"
+            font-size="34" font-weight="800" letter-spacing="-0.5" fill="#f8fafc"
+            filter="url(#glowBlue)" opacity="0.96">Oussama</text>
+      <!-- .dev tag -->
+      <text x="165" y="40" font-family="'Inter', 'Segoe UI', system-ui, sans-serif"
+            font-size="32" font-weight="700" letter-spacing="-0.3" fill="url(#cyanGradient)"
+            filter="url(#glowCyan)">.dev</text>
+      <!-- Subtitle underline -->
+      <line x1="0" y1="58" x2="222" y2="58" stroke="url(#neonMix)" stroke-width="1.4"
+            stroke-linecap="round" filter="url(#glowCyan)" opacity="0.7"/>
+      <!-- Tagline -->
+      <text x="0" y="88" font-family="'Inter', 'Segoe UI', system-ui, sans-serif"
+            font-size="12.5" font-weight="500" letter-spacing="2.8"
+            fill="#a5b4fc" opacity="0.9">
+        FULL STACK · AUTOMATION · AI
+      </text>
+    </g>
+
+    <!-- ========== 3 small capability icons at bottom ========== -->
+    <g transform="translate(290, 160)">
+      <!-- Code brackets icon (Web dev) -->
+      <g transform="translate(0, 0)" opacity="0.9">
+        <rect x="0" y="0" width="30" height="30" rx="7" fill="#1e1b4b" stroke="#312e81" stroke-width="1"/>
+        <path d="M 8 15 L 12 11 M 8 15 L 12 19 M 22 15 L 18 11 M 22 15 L 18 19"
+              fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"
+              filter="url(#glowCyan)"/>
+      </g>
+      <!-- Workflow node icon (n8n automation) -->
+      <g transform="translate(40, 0)" opacity="0.9">
+        <rect x="0" y="0" width="30" height="30" rx="7" fill="#1e1b4b" stroke="#312e81" stroke-width="1"/>
+        <circle cx="9" cy="15" r="2.5" fill="none" stroke="#22d3ee" stroke-width="1.5" filter="url(#glowCyan)"/>
+        <circle cx="21" cy="10" r="2.5" fill="none" stroke="#2563eb" stroke-width="1.5" filter="url(#glowBlue)"/>
+        <circle cx="21" cy="20" r="2.5" fill="none" stroke="#6366f1" stroke-width="1.5" filter="url(#glowBlue)"/>
+        <line x1="11.5" y1="15" x2="18.5" y2="10" stroke="#2563eb" stroke-width="1.2"/>
+        <line x1="11.5" y1="15" x2="18.5" y2="20" stroke="#2563eb" stroke-width="1.2"/>
+      </g>
+      <!-- AI chip icon (AI / Neural) -->
+      <g transform="translate(80, 0)" opacity="0.9">
+        <rect x="0" y="0" width="30" height="30" rx="7" fill="#1e1b4b" stroke="#312e81" stroke-width="1"/>
+        <rect x="8" y="8" width="14" height="14" rx="3" fill="none" stroke="#38bdf8" stroke-width="1.6"
+              filter="url(#glowCyan)"/>
+        <circle cx="15" cy="15" r="2.2" fill="#6366f1" filter="url(#glowBlue)"/>
+        <!-- pins -->
+        <line x1="4" y1="15" x2="8" y2="15" stroke="#2563eb" stroke-width="1.2"/>
+        <line x1="22" y1="15" x2="26" y2="15" stroke="#2563eb" stroke-width="1.2"/>
+        <line x1="15" y1="4" x2="15" y2="8" stroke="#2563eb" stroke-width="1.2"/>
+        <line x1="15" y1="22" x2="15" y2="26" stroke="#2563eb" stroke-width="1.2"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Corner tech accents -->
+  <path d="M 0 28 L 0 0 L 28 0" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.5" filter="url(#glowCyan)"/>
+  <path d="M 520 212 L 520 240 L 492 240" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.5" filter="url(#glowBlue)"/>
+</svg>
