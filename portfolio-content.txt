@@ -1,0 +1,112 @@
+================================================================================
+  CONTENU PORTFOLIO — OUSSAMA EL JOUNAIDI
+  Développeur Web Full Stack & Automation Specialist
+================================================================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. HERO SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+H1 :
+Développez vos applications web. Automatisez vos processus. Multipliez votre impact.
+
+SOUS-TITRE :
+Oussama El Jounaidi — Développeur Full-Stack & Spécialiste Automatisation/IA. Je conçois des plateformes web robustes et des workflows intelligents qui font gagner du temps, réduisent les coûts et accélèrent la croissance de votre business.
+
+BOUTON CTA PRIMAIRE :
+Voir mes projets
+
+BOUTON CTA SECONDAIRE :
+Me contacter
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  2. À PROPOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PARAGRAPHE (±95 mots) :
+
+Je suis Oussama El Jounaidi, développeur web full-stack et spécialiste en automatisation & IA. Ma double expertise me permet de construire des applications web modernes, sécurisées et performantes (React, Laravel, WordPress), tout en automatisant vos tâches répétitives grâce à n8n, Python et les APIs d'IA. Je transforme vos besoins métiers en solutions techniques concrètes : du MVP à la plateforme SaaS, du workflow manuel à la chaîne automatisée. Mon objectif : vous faire gagner un temps précieux pour vous concentrer sur l'essentiel.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  3. SECTION PROJETS — 3 FICHES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+────────────────────────────────────────────────────────────────────────────────
+  PROJET 01 — Plateforme SaaS de réservation d'infrastructures sportives
+────────────────────────────────────────────────────────────────────────────────
+
+TITRE :
+SportBook — Plateforme SaaS de réservation sportive
+
+PROBLÈME / SOLUTION :
+Un complexe sportif multisites gérait ses réservations via trois tableurs Excel et un carnet de notes. Perte de données, doubles réservations, clients frustrés. Solution : conception d'une plateforme SaaS centralisée avec gestion multi-établissements, planning en temps réel, paiements en ligne et tableau de bord analytique. Les gestionnaires accèdent à toutes leurs infrastructures depuis une seule interface. Les clients réservent 24/7 en 3 clics.
+
+STACK TECHNIQUE :
+Laravel 10 • React.js • API REST • MySQL • Bootstrap 5 • Git/Docker
+
+RÉSULTATS :
+→ 85% de réduction du temps administratif
+→ 0 doublon de réservation depuis la mise en ligne
+→ 3 complexes sportifs supplémentaires ont rejoint la plateforme
+→ Taux de satisfaction client : 4.8/5
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PROJET 02 — Architecture d'automatisation de contenus multimédias
+────────────────────────────────────────────────────────────────────────────────
+
+TITRE :
+MediaFlow — Pipeline d'automatisation multimédia tout-en-un
+
+PROBLÈME / SOLUTION :
+Un créateur de contenu passait 15 heures par semaine à éditer, reformater et publier ses vidéos sur 5 plateformes (YouTube, Instagram, TikTok, LinkedIn, X). Tâche répétitive, chronophage, source d'erreurs. Solution : mise en place d'un workflow n8n orchestré avec des scripts Python/FFmpeg. Uploader une seule vidéo brute → découpage automatique en clips, génération de sous-titres IA, adaptation aux formats de chaque plateforme, puis publication programmée.
+
+STACK TECHNIQUE :
+n8n Workflows • Python • FFmpeg • Prompt Engineering • APIs ChatGPT/Gemini • APIs Social Media
+
+RÉSULTATS :
+→ 15h/week → 30min/week de temps de publication
+→ ROI temps : 97% de gain
+→ +40% de fréquence de publication sans effort supplémentaire
+→ Génération automatique de 12 contenus dérivés par vidéo source
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PROJET 03 — Sites Web E-commerce & Vitrines sur-mesure
+────────────────────────────────────────────────────────────────────────────────
+
+TITRE :
+WebCraft — Création de sites WordPress performants et sur-mesure
+
+PROBLÈME / SOLUTION :
+Des TPE/PME avaient des sites datés, lents, non responsives et sans conversion. Un site vitrine ne générait aucune demande de devis ; une boutique en ligne avait un taux d'abandon panier de 82%. Solution : refontes complètes sous WordPress avec thème enfant sur-mesure, WooCommerce optimisé, Elementor pour la modularité éditoriale. Performance, SEO on-page et tunnel d'achat optimisés. Chaque site est pensé comme un outil commercial, pas comme une simple vitrine.
+
+STACK TECHNIQUE :
+WordPress • PHP • Elementor • WooCommerce • Bootstrap 5 • MySQL • Git
+
+RÉSULTATS :
+→ Taux de conversion moyen x3 après refonte
+→ Score Lighthouse : 95+ sur 4 critères (Performance, Accessibilité, SEO, Bonnes pratiques)
+→ Abandon panier réduit de 82% → 54% sur la boutique e-commerce
+→ 12 sites livrés en 12 mois, tous référencés en 1re page Google sur leurs mots-clés principaux
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  4. SECTION CONTACT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEXTE D'ACCROCHE :
+
+Un projet d'application web à développer ? Un workflow casse-tête à automatiser ? Une idée qui combine développement et IA ? Discutons-en.
+
+Que vous ayez besoin d'une plateforme Full-Stack (Laravel/React), d'un site WordPress sur-mesure, ou d'une architecture d'automatisation intelligente (n8n, Python, APIs IA), je transforme vos défis techniques en solutions fonctionnelles — livrées dans les temps, et pensées pour la performance.
+
+Prêt à gagner du temps et à passer à la vitesse supérieure ? Envoyez-moi un message, je réponds sous 24h ouvrées.
+
+
+================================================================================
+  FIN DU CONTENU
+================================================================================
