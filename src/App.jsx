@@ -8,7 +8,7 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative">
       <Header />
       <main className="flex-1">
         <Hero />
@@ -19,5 +19,5 @@ export default function App() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }

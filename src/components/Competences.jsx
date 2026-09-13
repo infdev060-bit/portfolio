@@ -1,12 +1,12 @@
 import { Code2, Workflow, Brain, Database, ArrowRight, ShoppingCart, Terminal, PenTool, Film, Box, GitBranch, Code } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
-const expertises = [
+const expertisesMeta = [
   {
     id: 'web',
     icon: Code2,
-    title: 'Développement Web Full-Stack & CMS',
-    description:
-      "Conception d'applications web scalables, APIs REST robustes et sites e-commerce sur-mesure.",
+    titleKey: 'competences.cards.web.title',
+    descriptionKey: 'competences.cards.web.description',
     badges: [
       { label: 'React.js' },
       { label: 'Laravel 10' },
@@ -21,9 +21,8 @@ const expertises = [
   {
     id: 'automation',
     icon: Workflow,
-    title: 'Automatisation & Workflows',
-    description:
-      'Orchestration de processus métiers complexes avec n8n. Scripts Python & FFmpeg pour traitements multimédias et API webhooks.',
+    titleKey: 'competences.cards.automation.title',
+    descriptionKey: 'competences.cards.automation.description',
     badges: [
       { label: 'n8n Workflows' },
       { label: 'Python', icon: Terminal },
@@ -36,9 +35,8 @@ const expertises = [
   {
     id: 'ia-media',
     icon: Brain,
-    title: 'IA Générative & Création Média',
-    description:
-      "Intégration des LLMs (ChatGPT, Gemini, Claude) dans vos process et création de contenus visuels/vidéo automatisés.",
+    titleKey: 'competences.cards.iaMedia.title',
+    descriptionKey: 'competences.cards.iaMedia.description',
     badges: [
       { label: 'Prompt Engineering' },
       { label: 'ChatGPT / Gemini' },
@@ -51,9 +49,8 @@ const expertises = [
   {
     id: 'data-devops',
     icon: Database,
-    title: 'Databases & DevOps',
-    description:
-      "Modélisation de bases de données relationnelles, conteneurisation Docker et gestion de code source avec Git.",
+    titleKey: 'competences.cards.dataDevops.title',
+    descriptionKey: 'competences.cards.dataDevops.description',
     badges: [
       { label: 'MySQL' },
       { label: 'SQL Server' },
@@ -66,23 +63,22 @@ const expertises = [
 ]
 
 export default function Competences() {
+  const { t } = useTranslation()
   return (
     <section id="competences" className="py-20 sm:py-28 relative bg-base-900/30">
       <div className="container-px">
         <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
-          <p className="section-eyebrow mb-3">Ce que je fais</p>
+          <p className="section-eyebrow mb-3">{t('competences.eyebrow')}</p>
           <h2 className="section-title mb-4">
-            Mon expertise<span className="hero-gradient-text"> Dev & Automation</span>
+            {t('competences.title')}<span className="hero-gradient-text">{t('competences.titleAccent')}</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            4 domaines complémentaires, inspirés directement de mon CV, pour construire
-            vos produits de A à Z — du développement à l'automatisation, de l'IA aux
-            bases de données.
+            {t('competences.intro')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
-          {expertises.map(({ id, icon: Icon, title, description, badges }, i) => (
+          {expertisesMeta.map(({ id, icon: Icon, titleKey, descriptionKey, badges }, i) => (
             <article
               key={id}
               className="group relative rounded-2xl bg-base-900/70 border border-slate-800 p-7 sm:p-8 overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:shadow-glow-cyan hover:border-accent-cyan/35"
@@ -105,10 +101,10 @@ export default function Competences() {
               </div>
 
               <h3 className="relative z-10 text-xl sm:text-[22px] font-bold text-white mb-3 leading-snug group-hover:text-transparent group-hover:bg-gradient-text group-hover:bg-clip-text transition-all duration-300">
-                {title}
+                {t(titleKey)}
               </h3>
               <p className="relative z-10 text-slate-400 text-sm leading-relaxed mb-6">
-                {description}
+                {t(descriptionKey)}
               </p>
 
               <div className="relative z-10 flex flex-wrap gap-2 mb-7">
@@ -125,11 +121,11 @@ export default function Competences() {
 
               <div className="relative z-10 flex items-center justify-between pt-5 border-t border-slate-800/80 group-hover:border-accent-cyan/20 transition-colors">
                 <span className="text-sm font-semibold text-slate-500 group-hover:text-accent-cyan transition-colors duration-300">
-                  En savoir plus
+                  {t('competences.learnMore')}
                 </span>
                 <button
                   type="button"
-                  aria-label={`Voir détails : ${title}`}
+                  aria-label={`${t('competences.viewDetails')} : ${t(titleKey)}`}
                   className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/3 border border-white/8 ring-accent-cyan/20 ring-1 text-slate-400 group-hover:text-accent-cyan group-hover:ring-accent-cyan/40 transition-all duration-300 group-hover:translate-x-0.5"
                 >
                   <ArrowRight

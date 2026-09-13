@@ -1,0 +1,306 @@
+{
+  "languageSwitcher": {
+    "label": "Changer de langue",
+    "current": "Langue"
+  },
+  "header": {
+    "title": "Portfolio",
+    "nav": {
+      "home": "Accueil",
+      "skills": "Compétences",
+      "projects": "Projets",
+      "career": "Parcours",
+      "contact": "Contact"
+    },
+    "contact": "Me Contacter",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu"
+  },
+  "hero": {
+    "availability": "Disponible pour de nouveaux projets",
+    "h1": "Développez vos <1>apps web</1>.<2></2><3>Automatisez.</3> Multipliez<4></4>votre impact.",
+    "intro": {
+      "role": "Développeur Web Full-Stack, Spécialiste Automatisation / IA & Créateur Digital",
+      "basedIn": "basé à",
+      "location": "Casablanca, Maroc",
+      "combine": "Je combine",
+      "webApps": "applications web sur-mesure",
+      "webAppsTech": "(React, Laravel, WordPress/Elementor),",
+      "automation": "automatisation de workflows",
+      "automationTech": "(n8n, Python, IA) et",
+      "digital": "création digitale",
+      "digitalTech": "(Figma, Canva, CapCut) pour donner vie à vos projets de A à Z avec cohérence et rapidité."
+    },
+    "techGroups": {
+      "webDev": "Développement Web",
+      "automationAi": "Automatisation & IA",
+      "designMedia": "Design & Média"
+    },
+    "stats": {
+      "experience": "Années d'expérience",
+      "projects": "Projets livrés",
+      "timeSaved": "Gain de temps moyen"
+    },
+    "ctaPrimary": "Voir les projets",
+    "ctaSecondary": "Télécharger CV",
+    "cvDownloadSr": "(téléchargement direct)",
+    "codeCard": {
+      "fileLabel": "Oussama.dev · Full-Stack · Auto · Creator",
+      "role": "Full-Stack · Automation · AI · Digital Creator",
+      "location": "Casablanca, MA"
+    },
+    "workflowCard": {
+      "title": "Workflow",
+      "subtitle": "Auto · Synthèse IA",
+      "gain": "gain de temps",
+      "activeWorkflows": "4 workflows actifs"
+    },
+    "locationCard": {
+      "city": "Casablanca",
+      "detail": "Maroc · GMT+1 · Remote OK"
+    },
+    "pipeline": {
+      "title": "Pipeline n8n · Design → Build → Auto",
+      "online": "En ligne",
+      "design": "Design",
+      "designSub": "Figma · Canva",
+      "build": "Build",
+      "buildSub": "React · Laravel",
+      "aiAuto": "AI · Auto",
+      "aiAutoSub": "n8n · Gemini",
+      "launch": "Launch",
+      "launchSub": "CapCut · Media"
+    }
+  },
+  "competences": {
+    "eyebrow": "Ce que je fais",
+    "title": "Mon expertise",
+    "titleAccent": " Dev & Automation",
+    "intro": "4 domaines complémentaires, inspirés directement de mon CV, pour construire vos produits de A à Z — du développement à l'automatisation, de l'IA aux bases de données.",
+    "learnMore": "En savoir plus",
+    "viewDetails": "Voir détails",
+    "cards": {
+      "web": {
+        "title": "Développement Web Full-Stack & CMS",
+        "description": "Conception d'applications web scalables, APIs REST robustes et sites e-commerce sur-mesure."
+      },
+      "automation": {
+        "title": "Automatisation & Workflows",
+        "description": "Orchestration de processus métiers complexes avec n8n. Scripts Python & FFmpeg pour traitements multimédias et API webhooks."
+      },
+      "iaMedia": {
+        "title": "IA Générative & Création Média",
+        "description": "Intégration des LLMs (ChatGPT, Gemini, Claude) dans vos process et création de contenus visuels/vidéo automatisés."
+      },
+      "dataDevops": {
+        "title": "Databases & DevOps",
+        "description": "Modélisation de bases de données relationnelles, conteneurisation Docker et gestion de code source avec Git."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Portfolio",
+    "title": "Projets récents",
+    "titleAccent": " avec impact mesurable",
+    "intro": "4 réalisations emblématiques — du SaaS Full-Stack aux workflows d'automatisation IA, en passant par le site médical et les boutiques e-commerce convertissantes.",
+    "problemLabel": "📌 Problème",
+    "solutionLabel": "✅ Solution",
+    "viewDemo": "Voir la Démo",
+    "privateDemo": "Démo privée",
+    "viewCode": "GitHub",
+    "privateCode": "Code privé",
+    "metricsLabels": {
+      "adminTime": "Temps admin",
+      "duplicates": "Doublons",
+      "establishments": "Établissements",
+      "satisfaction": "Satisfaction",
+      "timePerWeek": "Temps / semaine",
+      "timeSaved": "Gain temps",
+      "publishFrequency": "Fréquence pub",
+      "contentsPerSource": "Contenus / source",
+      "phoneAppointments": "RDV téléphone",
+      "newPatients": "Nouveaux patients",
+      "availability": "Taux disponibilité",
+      "lighthouse": "Score Lighthouse",
+      "conversion": "Conversion",
+      "cartAbandonment": "Abandon panier",
+      "google": "Google"
+    },
+    "items": {
+      "sportbook": {
+        "title": "SportBook — SaaS Réservation Terrains Sportifs",
+        "category": "Full-Stack · SaaS B2B",
+        "problem": "Gestion des réservations via 3 tableurs Excel + carnets papier : perte de données, doublons, conflits de créneaux et administration chronophage pour 3 complexes sportifs.",
+        "solution": "Plateforme SaaS multi-établissements (Laravel 10 + Sanctum + Laratrust pour rôles Admin/Gérant/Joueur) avec planning temps réel, paiements, API REST et dashboard analytique React."
+      },
+      "mediaflow": {
+        "title": "MediaFlow — Pipeline Automation Multimédia & IA",
+        "category": "Automatisation · n8n · IA",
+        "problem": "Créateur de contenu : 15h/semaine à éditer manuellement, recadrer, sous-titrer et publier sur 5 plateformes sociales. Fréquence de publication bloquée, épuisement créatif.",
+        "solution": "Orchestration n8n + scripts Python (FFmpeg) + API ChatGPT : upload 1 vidéo source → génération automatique de clips multi-format, sous-titres IA, hashtags et publication programmée."
+      },
+      "tantaoui": {
+        "title": "Cabinet Médical Dr. Tantaoui — Site & RDV",
+        "category": "Web Santé · React · UI/UX",
+        "problem": "Cabinet médical sans présence digitale : prise de RDV par téléphone uniquement (4h/jour de standard), informations obsolètes, nouveaux patients difficilement convertis.",
+        "solution": "Site vitrine médical moderne (React + Tailwind) avec présentation des spécialités, horaires, zone géolocalisation, formulaire de contact sécurisé et interface de prise de rendez-vous."
+      },
+      "vasycom": {
+        "title": "VasyCom — Agence & Sites Vitrines / E-commerce",
+        "category": "WordPress · Elementor · WooCommerce",
+        "problem": "PME avec sites vitrines datés et boutique e-commerce non-convertissante : abandon panier à 82%, chargements lents, visibilité SEO inexistante sur Google.",
+        "solution": "Portefeuille de sites sur-mesure (WordPress + Elementor Pro + WooCommerce) : thèmes enfants optimisés, tunnel d'achat restructuré, SEO on-page et performances Lighthouse 95+."
+      }
+    }
+  },
+  "career": {
+    "eyebrow": "Trajectoire",
+    "title": "Parcours &",
+    "titleAccent": " Certifications",
+    "intro": "Expériences terrain, formations full-stack et certifications reconnues : un parcours structuré pour des livrables de qualité.",
+    "filters": {
+      "all": "Tout",
+      "experience": "Expériences",
+      "education": "Formations",
+      "certification": "Certifications"
+    },
+    "shortLabels": {
+      "experience": "Expérience",
+      "education": "Formation",
+      "certification": "Certification"
+    },
+    "emptyLabels": {
+      "experience": "Aucune expérience affichée",
+      "education": "Aucune formation affichée",
+      "certification": "Aucune certification affichée",
+      "default": "Aucun élément à afficher"
+    },
+    "items": {
+      "xp-auto-2026": {
+        "title": "Automatisation & IA — Projet Personnel",
+        "org": "Freelance — Casablanca",
+        "location": "Casablanca",
+        "desc": "Conception et orchestration de workflows n8n, intégrations d'APIs IA (ChatGPT, Gemini, Claude) et pipeline de création de contenu multimédia automatisé."
+      },
+      "xp-vasycom-2024": {
+        "title": "Développeur Web — Stage",
+        "org": "VASYCOM",
+        "location": "Casablanca",
+        "desc": "Développement et personnalisation de sites WordPress, thèmes Elementor sur-mesure et configuration de boutiques WooCommerce performantes."
+      },
+      "xp-ocode-2024": {
+        "title": "Développeur Web — Stage",
+        "org": "OCODE",
+        "location": "Casablanca",
+        "desc": "Développement front-end & back-end sur WordPress, PHP natif et JavaScript. Réalisation de tests QA et validation de livrables qualité."
+      },
+      "form-simplon-2025": {
+        "title": "Développement Front-End & Back-End",
+        "org": "Simplon Maghreb",
+        "location": "Casablanca",
+        "desc": "Formation intensive full-stack : React.js moderne, Laravel 10, Node.js, modélisation de bases de données et architecture de projets web scalables."
+      },
+      "form-ista-2022": {
+        "title": "Diplôme de Technicien Spécialisé en Développement Informatique",
+        "org": "ISTA / OFPPT",
+        "location": "Casablanca",
+        "desc": "Formation complète en algorithmique, programmation web front-end & back-end, gestion de bases de données et méthodologie de génie logiciel."
+      },
+      "form-bac-2020": {
+        "title": "Baccalauréat Sciences Physiques",
+        "org": "Lycée El Moatamid Bnou Abbad",
+        "location": "Casablanca",
+        "desc": "Baccalauréat option Sciences Physiques — base solide en mathématiques, logique et raisonnement scientifique pour l'informatique."
+      },
+      "cert-laravel-2024": {
+        "title": "Développement Web avec Laravel",
+        "org": "Certification Laravel",
+        "location": "En ligne",
+        "desc": "Maîtrise de Laravel 10 : MVC, Eloquent ORM, Blade, migrations, APIs REST, authentification et bonnes pratiques framework."
+      },
+      "cert-git-2023": {
+        "title": "Gérez du code avec Git et GitHub",
+        "org": "OpenClassrooms",
+        "location": "En ligne",
+        "desc": "Workflow Git professionnel : branches, merge, rebase, pull requests, collaboration en équipe, résolution de conflits et bonnes pratiques."
+      },
+      "cert-js-2023": {
+        "title": "Apprenez à programmer avec JavaScript",
+        "org": "OpenClassrooms",
+        "location": "En ligne",
+        "desc": "JavaScript moderne ES6+ : variables, fonctions, tableaux, objets, DOM, événements, promesses, async/await et programmation orientée objet."
+      },
+      "cert-bootstrap-2023": {
+        "title": "Créez des sites web responsives avec Bootstrap 5",
+        "org": "OpenClassrooms",
+        "location": "En ligne",
+        "desc": "Conception de layouts responsives avec le système de grille Bootstrap 5, composants UI, utilities, formulaires et design mobile-first."
+      },
+      "cert-html-2023": {
+        "title": "Créez votre site web avec HTML5 et CSS3",
+        "org": "OpenClassrooms",
+        "location": "En ligne",
+        "desc": "Fondamentaux web : sémantique HTML5, Flexbox, CSS Grid, animations CSS, accessibilité, responsive media queries et SEO on-page basique."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Parlons de votre",
+    "titleAccent": " projet",
+    "intro": "Une application web à développer ? Un workflow à automatiser ? Une idée hybride Dev + IA ? Parlons-en — je suis",
+    "introHighlight": "disponible immédiatement",
+    "introEnd": "pour de nouvelles missions.",
+    "badges": {
+      "fullTime": "Plein temps",
+      "available": "Disponibilité immédiate"
+    },
+    "directContact": "Contact direct",
+    "cards": {
+      "emailLabel": "Email",
+      "emailAction": "Envoyer un email",
+      "phoneLabel": "Téléphone",
+      "phoneAction": "Appeler",
+      "locationLabel": "Localisation",
+      "locationAction": "Voir sur la carte",
+      "githubLabel": "GitHub",
+      "githubAction": "Ouvrir le profil"
+    },
+    "linkedinLabel": "LinkedIn — Profil professionnel",
+    "linkedinAction": "Voir mon expérience & formations",
+    "missionTypesTitle": "Types de missions",
+    "missionsAccepted": "Missions acceptées — Remote OK",
+    "responseTime": "Délai de réponse estimé :",
+    "responseTimeHighlight": "24h ouvrées",
+    "missions": {
+      "fullstack": {
+        "title": "Développement Full-Stack",
+        "desc": "Applications web scalables — React + Laravel, APIs REST robustes, dashboards admins et SaaS sur-mesure."
+      },
+      "automation": {
+        "title": "Automatisation & Workflows n8n",
+        "desc": "Orchestration de processus métiers, connecteurs API, scripts Python, gains de temps mesurables."
+      },
+      "ai": {
+        "title": "Intégrations IA Générative",
+        "desc": "LLMs (ChatGPT, Gemini, Claude) dans vos process : prompt engineering, chaînes de traitement IA, contenu automatisé."
+      },
+      "wordpress": {
+        "title": "Sites WordPress / E-commerce",
+        "desc": "Refontes vitrines, boutiques WooCommerce performantes, SEO optimisé et Elementor sur-mesure."
+      }
+    }
+  },
+  "footer": {
+    "role": "Développeur Full-Stack & Automation Specialist",
+    "socials": {
+      "github": "Voir mes projets & contributions",
+      "linkedin": "Mon parcours professionnel"
+    },
+    "copyright": "Tous droits réservés.",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "madeWith": "Conçu & développé avec",
+    "madeIn": "à Casablanca"
+  }
+}

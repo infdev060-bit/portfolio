@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { GraduationCap, Award, Briefcase, Calendar, ChevronRight, Filter, CheckCircle2, Code2, Workflow, Database, Shield, Globe, PenTool, FileCode } from 'lucide-react'
 
 const timeline = [
@@ -9,10 +10,6 @@ const timeline = [
     dateOrder: 202600,
     type: 'experience',
     icon: Workflow,
-    title: 'Automatisation & IA — Projet Personnel',
-    org: 'Freelance — Casablanca',
-    location: 'Casablanca',
-    desc: "Conception et orchestration de workflows n8n, intégrations d'APIs IA (ChatGPT, Gemini, Claude) et pipeline de création de contenu multimédia automatisé.",
     tags: ['n8n Workflows', 'API IA', 'ChatGPT / Gemini', 'Python', 'FFmpeg'],
     tagIcons: { 'n8n Workflows': Workflow, 'API IA': Shield, Python: Code2, FFmpeg: PenTool },
   },
@@ -22,10 +19,6 @@ const timeline = [
     dateOrder: 202408,
     type: 'experience',
     icon: Briefcase,
-    title: 'Développeur Web — Stage',
-    org: 'VASYCOM',
-    location: 'Casablanca',
-    desc: 'Développement et personnalisation de sites WordPress, thèmes Elementor sur-mesure et configuration de boutiques WooCommerce performantes.',
     tags: ['WordPress', 'Elementor', 'WooCommerce', 'HTML/CSS', 'JavaScript'],
     tagIcons: { WordPress: Globe, Elementor: FileCode, WooCommerce: Shield, JavaScript: Code2 },
   },
@@ -35,10 +28,6 @@ const timeline = [
     dateOrder: 202406,
     type: 'experience',
     icon: Briefcase,
-    title: 'Développeur Web — Stage',
-    org: 'OCODE',
-    location: 'Casablanca',
-    desc: "Développement front-end & back-end sur WordPress, PHP natif et JavaScript. Réalisation de tests QA et validation de livrables qualité.",
     tags: ['WordPress', 'Elementor', 'PHP', 'JavaScript', 'Tests & QA'],
     tagIcons: { WordPress: Globe, PHP: Code2, JavaScript: Code2, 'Tests & QA': CheckCircle2 },
   },
@@ -50,10 +39,6 @@ const timeline = [
     dateOrder: 202511,
     type: 'education',
     icon: GraduationCap,
-    title: 'Développement Front-End & Back-End',
-    org: 'Simplon Maghreb',
-    location: 'Casablanca',
-    desc: 'Formation intensive full-stack : React.js moderne, Laravel 10, Node.js, modélisation de bases de données et architecture de projets web scalables.',
     tags: ['React.js', 'Laravel 10', 'Node.js', 'Bases de Données', 'Full Stack'],
     tagIcons: { 'React.js': Code2, 'Laravel 10': Shield, 'Node.js': Code2, 'Bases de Données': Database },
   },
@@ -63,10 +48,6 @@ const timeline = [
     dateOrder: 202200,
     type: 'education',
     icon: GraduationCap,
-    title: 'Diplôme de Technicien Spécialisé en Développement Informatique',
-    org: 'ISTA / OFPPT',
-    location: 'Casablanca',
-    desc: 'Formation complète en algorithmique, programmation web front-end & back-end, gestion de bases de données et méthodologie de génie logiciel.',
     tags: ['Algorithmique', 'Programmation Web', 'PHP', 'SQL', 'Génie Logiciel'],
     tagIcons: { 'Algorithmique': Code2, PHP: Code2, SQL: Database, 'Génie Logiciel': FileCode },
   },
@@ -76,10 +57,6 @@ const timeline = [
     dateOrder: 202000,
     type: 'education',
     icon: GraduationCap,
-    title: 'Baccalauréat Sciences Physiques',
-    org: 'Lycée El Moatamid Bnou Abbad',
-    location: 'Casablanca',
-    desc: "Baccalauréat option Sciences Physiques — base solide en mathématiques, logique et raisonnement scientifique pour l'informatique.",
     tags: ['Mathématiques', 'Physique-Chimie', 'Logique'],
     tagIcons: {},
   },
@@ -91,10 +68,6 @@ const timeline = [
     dateOrder: 202499,
     type: 'certification',
     icon: Award,
-    title: 'Développement Web avec Laravel',
-    org: 'Certification Laravel',
-    location: 'En ligne',
-    desc: "Maîtrise de Laravel 10 : MVC, Eloquent ORM, Blade, migrations, APIs REST, authentification et bonnes pratiques framework.",
     tags: ['Laravel 10', 'HTML/CSS', 'JavaScript', 'Bootstrap 5', 'REST API'],
     tagIcons: { 'Laravel 10': Shield, Bootstrap: Globe, 'REST API': Workflow },
   },
@@ -104,10 +77,6 @@ const timeline = [
     dateOrder: 202305,
     type: 'certification',
     icon: Award,
-    title: 'Gérez du code avec Git et GitHub',
-    org: 'OpenClassrooms',
-    location: 'En ligne',
-    desc: 'Workflow Git professionnel : branches, merge, rebase, pull requests, collaboration en équipe, résolution de conflits et bonnes pratiques.',
     tags: ['Git', 'GitHub', 'Versioning', 'Collaboration', 'Branches'],
     tagIcons: {},
   },
@@ -117,10 +86,6 @@ const timeline = [
     dateOrder: 202304,
     type: 'certification',
     icon: Award,
-    title: 'Apprenez à programmer avec JavaScript',
-    org: 'OpenClassrooms',
-    location: 'En ligne',
-    desc: 'JavaScript moderne ES6+ : variables, fonctions, tableaux, objets, DOM, événements, promesses, async/await et programmation orientée objet.',
     tags: ['JavaScript ES6+', 'DOM', 'Async/Await', 'POO', 'Fonctions'],
     tagIcons: { 'JavaScript ES6+': Code2, DOM: Globe, POO: FileCode },
   },
@@ -130,10 +95,6 @@ const timeline = [
     dateOrder: 202303,
     type: 'certification',
     icon: Award,
-    title: 'Créez des sites web responsives avec Bootstrap 5',
-    org: 'OpenClassrooms',
-    location: 'En ligne',
-    desc: 'Conception de layouts responsives avec le système de grille Bootstrap 5, composants UI, utilities, formulaires et design mobile-first.',
     tags: ['Bootstrap 5', 'Responsive Design', 'Grille Flex', 'Composants UI', 'Mobile-First'],
     tagIcons: { 'Bootstrap 5': Globe, 'Responsive Design': FileCode },
   },
@@ -143,29 +104,26 @@ const timeline = [
     dateOrder: 202302,
     type: 'certification',
     icon: Award,
-    title: 'Créez votre site web avec HTML5 et CSS3',
-    org: 'OpenClassrooms',
-    location: 'En ligne',
-    desc: 'Fondamentaux web : sémantique HTML5, Flexbox, CSS Grid, animations CSS, accessibilité, responsive media queries et SEO on-page basique.',
     tags: ['HTML5', 'CSS3', 'Flexbox / Grid', 'Animations CSS', 'SEO'],
     tagIcons: { HTML5: Globe, CSS3: PenTool, 'Flexbox / Grid': FileCode, SEO: Shield },
   },
 ]
 
 const typeMeta = {
-  experience: { label: 'Expériences', shortLabel: 'Expérience', emptyLabel: 'Aucune expérience affichée', color: 'cyan', icon: Briefcase },
-  education: { label: 'Formations', shortLabel: 'Formation', emptyLabel: 'Aucune formation affichée', color: 'blue', icon: GraduationCap },
-  certification: { label: 'Certifications', shortLabel: 'Certification', emptyLabel: 'Aucune certification affichée', color: 'emerald', icon: Award },
+  experience: { filterKey: 'career.filters.experience', shortKey: 'career.shortLabels.experience', emptyKey: 'career.emptyLabels.experience', color: 'cyan', icon: Briefcase },
+  education: { filterKey: 'career.filters.education', shortKey: 'career.shortLabels.education', emptyKey: 'career.emptyLabels.education', color: 'blue', icon: GraduationCap },
+  certification: { filterKey: 'career.filters.certification', shortKey: 'career.shortLabels.certification', emptyKey: 'career.emptyLabels.certification', color: 'emerald', icon: Award },
 }
 
 const filters = [
-  { id: 'all', label: 'Tout', icon: Filter, count: timeline.length },
-  { id: 'experience', label: typeMeta.experience.label, icon: typeMeta.experience.icon, count: timeline.filter((t) => t.type === 'experience').length },
-  { id: 'education', label: typeMeta.education.label, icon: typeMeta.education.icon, count: timeline.filter((t) => t.type === 'education').length },
-  { id: 'certification', label: typeMeta.certification.label, icon: typeMeta.certification.icon, count: timeline.filter((t) => t.type === 'certification').length },
+  { id: 'all', labelKey: 'career.filters.all', icon: Filter, count: timeline.length },
+  { id: 'experience', labelKey: typeMeta.experience.filterKey, icon: typeMeta.experience.icon, count: timeline.filter((t) => t.type === 'experience').length },
+  { id: 'education', labelKey: typeMeta.education.filterKey, icon: typeMeta.education.icon, count: timeline.filter((t) => t.type === 'education').length },
+  { id: 'certification', labelKey: typeMeta.certification.filterKey, icon: typeMeta.certification.icon, count: timeline.filter((t) => t.type === 'certification').length },
 ]
 
 export default function Parcours() {
+  const { t } = useTranslation()
   const [activeFilter, setActiveFilter] = useState('all')
 
   const filtered = timeline
@@ -177,18 +135,18 @@ export default function Parcours() {
       <div className="container-px">
         {/* ===== TITRE & INTRO ===== */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
-          <p className="section-eyebrow mb-3">Trajectoire</p>
+          <p className="section-eyebrow mb-3">{t('career.eyebrow')}</p>
           <h2 className="section-title mb-4">
-            Parcours &<span className="hero-gradient-text"> Certifications</span>
+            {t('career.title')}<span className="hero-gradient-text">{t('career.titleAccent')}</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            Expériences terrain, formations full-stack et certifications reconnues : un parcours structuré pour des livrables de qualité.
+            {t('career.intro')}
           </p>
         </div>
 
         {/* ===== FILTRES PAR CATEGORIE ===== */}
         <div className="relative z-10 mb-12 sm:mb-14 flex flex-wrap justify-center gap-2.5 sm:gap-3">
-          {filters.map(({ id, label, icon: FIcon, count }) => {
+          {filters.map(({ id, labelKey, icon: FIcon, count }) => {
             const active = activeFilter === id
             return (
               <button
@@ -206,7 +164,7 @@ export default function Parcours() {
                   className={`w-4 h-4 ${active ? '' : 'opacity-80 group-hover:opacity-100'}`}
                   strokeWidth={2}
                 />
-                {label}
+                {t(labelKey)}
                 <span
                   className={`inline-flex items-center justify-center min-w-[1.4rem] h-5 px-1.5 rounded-full text-[11px] font-bold ${
                     active
@@ -224,7 +182,7 @@ export default function Parcours() {
         {/* ===== TIMELINE VERTICALE ===== */}
         {filtered.length === 0 ? (
           <div className="text-center py-20 text-slate-500">
-            {typeMeta[activeFilter]?.emptyLabel ?? 'Aucun élément à afficher'}
+            {typeMeta[activeFilter] ? t(typeMeta[activeFilter].emptyKey) : t('career.emptyLabels.default')}
           </div>
         ) : (
           <div className="relative">
@@ -239,6 +197,7 @@ export default function Parcours() {
                 const alignLeft = i % 2 === 0
                 const ItemIcon = item.icon
                 const meta = typeMeta[item.type]
+                const MetaIcon = meta.icon
 
                 return (
                   <li key={item.id} className="relative pl-12 sm:pl-0 group/item">
@@ -252,8 +211,8 @@ export default function Parcours() {
                           <Calendar className="w-3 h-3" strokeWidth={2.2} />
                           {item.year}
                           <span className="mx-1 opacity-40">•</span>
-                          <meta.icon className="w-3 h-3" strokeWidth={2.2} />
-                          {meta.shortLabel}
+                          <MetaIcon className="w-3 h-3" strokeWidth={2.2} />
+                          {t(meta.shortKey)}
                         </div>
 
                         {/* ===== CARTE ===== */}
@@ -270,37 +229,37 @@ export default function Parcours() {
                             {/* Badge #categorie */}
                             <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[10px] font-bold tracking-[0.16em] uppercase text-slate-400 shrink-0">
                               <span className="relative inline-block w-1.5 h-1.5 rounded-full bg-accent-cyan/80 group-hover/card:bg-accent-cyan group-hover/card:shadow-[0_0_8px_rgba(56,189,248,0.8)] transition-all" />
-                              {item.location}
+                              {t(`career.items.${item.id}.location`)}
                             </span>
                           </div>
 
                           {/* TITRE */}
                           <h3 className="relative z-10 text-lg sm:text-[19px] font-bold text-white mb-1.5 leading-snug group-hover/card:text-transparent group-hover/card:bg-gradient-text group-hover/card:bg-clip-text transition-all duration-300">
-                            {item.title}
+                            {t(`career.items.${item.id}.title`)}
                           </h3>
 
                           {/* ORGANE / ÉCOLE */}
                           <div className="relative z-10 text-sm font-semibold mb-3 text-accent-cyan flex items-center gap-1.5">
                             <ChevronRight className="w-3.5 h-3.5 shrink-0" strokeWidth={2.5} />
-                            <span className="truncate">{item.org}</span>
+                            <span className="truncate">{t(`career.items.${item.id}.org`)}</span>
                           </div>
 
                           {/* DESCRIPTION */}
                           <p className="relative z-10 text-sm text-slate-400 leading-relaxed mb-4.5">
-                            {item.desc}
+                            {t(`career.items.${item.id}.desc`)}
                           </p>
 
                           {/* BADGES COMPETENCES */}
                           <div className="relative z-10 flex flex-wrap gap-1.5">
-                            {item.tags.map((t) => {
-                              const TagIcon = item.tagIcons?.[t]
+                            {item.tags.map((tag) => {
+                              const TagIcon = item.tagIcons?.[tag]
                               return (
                                 <span
-                                  key={t}
+                                  key={tag}
                                   className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium border border-white/10 bg-white/[0.04] text-slate-200 transition-all duration-250 hover:border-accent-cyan/30 hover:bg-accent-cyan/[0.06] hover:text-white"
                                 >
                                   {TagIcon && <TagIcon className="w-3 h-3 opacity-80" strokeWidth={2} />}
-                                  {t}
+                                  {tag}
                                 </span>
                               )
                             })}

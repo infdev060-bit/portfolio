@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+/* i18next CSS for language switcher */
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 8px;
+}
+.language-switcher button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+.language-switcher button:hover {
+  background-color: #f3f3f3;
+}
+.language-switcher button.active {
+  background-color: #000;
+  color: white;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

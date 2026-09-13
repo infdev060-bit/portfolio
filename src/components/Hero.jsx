@@ -1,10 +1,13 @@
 import { ArrowRight, Download, MapPin, Atom, Flame, Workflow, Brain, Terminal as TerminalIcon, Database, GitBranch, Cpu, MessageSquare, Code2, PenTool, Palette, Film, LayoutGrid, Globe2, Wand2, Video } from 'lucide-react'
+import { useTranslation, Trans } from 'react-i18next'
 
 export default function Hero() {
+  const { t } = useTranslation()
+
   /* ====== GROUPES DE TECHNOLOGIES ORGANISÉS ====== */
   const techGroups = [
     {
-      name: 'Développement Web',
+      name: t('hero.techGroups.webDev'),
       color: 'text-accent-cyan',
       gradient: 'from-accent-cyan to-accent-blue',
       icon: Code2,
@@ -16,7 +19,7 @@ export default function Hero() {
       ],
     },
     {
-      name: 'Automatisation & IA',
+      name: t('hero.techGroups.automationAi'),
       color: 'text-accent-emerald',
       gradient: 'from-accent-emerald to-accent-cyan',
       icon: Workflow,
@@ -27,7 +30,7 @@ export default function Hero() {
       ],
     },
     {
-      name: 'Design & Média',
+      name: t('hero.techGroups.designMedia'),
       color: 'text-[#e03e9b]',
       gradient: 'from-[#f24e1e] via-[#a259ff] to-[#00c4cc]',
       icon: Palette,
@@ -40,9 +43,9 @@ export default function Hero() {
   ]
 
   const stats = [
-    { k: '1+',  v: "Années d'expérience" },
-    { k: '20+', v: 'Projets livrés' },
-    { k: '97%', v: 'Gain de temps moyen' },
+    { k: '1+',  v: t('hero.stats.experience') },
+    { k: '20+', v: t('hero.stats.projects') },
+    { k: '97%', v: t('hero.stats.timeSaved') },
   ]
 
   return (
@@ -79,46 +82,46 @@ export default function Hero() {
             <div className="inline-flex items-center mb-6 sm:mb-7">
               <span className="hero-availability-pill animate-pulse-slow">
                 <span className="hero-availability-dot animate-pulse-ring inline-flex" />
-                <span className="relative">Disponible pour de nouveaux projets</span>
+                <span className="relative">{t('hero.availability')}</span>
               </span>
             </div>
 
             {/* H1 — Titre principal */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[3.6rem] xl:text-7xl font-extrabold tracking-tight leading-[1.05] text-white mb-5 sm:mb-6">
-              Développez vos{' '}
-              <span className="hero-gradient-text font-black">apps web</span>
-              .<br className="hidden sm:block" />
-              <span className="hero-gradient-text font-black italic">Automatisez.</span>{' '}
-              Multipliez
-              <br className="hidden sm:block" />
-              votre impact.
+              <Trans
+                i18nKey="hero.h1"
+                components={[
+                  <span className="hero-gradient-text font-black" />,
+                  <span className="hidden sm:block" />,
+                  <span className="hero-gradient-text font-black italic" />,
+                  <span className="hidden sm:block" />,
+                ]}
+              />
             </h1>
 
             {/* Paragraphe d'accroche */}
             <p className="text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl mb-6 sm:mb-7">
               <span className="font-semibold text-slate-200">Oussama El Jounaidi</span> —{' '}
-              <span className="text-slate-300">
-                Développeur Web Full-Stack, Spécialiste Automatisation / IA & Créateur Digital
-              </span>{' '}
-              basé à{' '}
+              <span className="text-slate-300">{t('hero.intro.role')}</span>{' '}
+              {t('hero.intro.basedIn')}{' '}
               <span className="inline-flex items-center gap-1 text-slate-300">
                 <MapPin className="w-4 h-4 text-accent-cyan" />
-                Casablanca, Maroc
+                {t('hero.intro.location')}
               </span>
               .<br className="hidden sm:block" />
-              Je combine{' '}
+              {t('hero.intro.combine')}{' '}
               <span className="text-white font-medium">
-                applications web sur-mesure
+                {t('hero.intro.webApps')}
               </span>{' '}
-              (React, Laravel, WordPress/Elementor),{' '}
+              {t('hero.intro.webAppsTech')}{' '}
               <span className="text-white font-medium">
-                automatisation de workflows
+                {t('hero.intro.automation')}
               </span>{' '}
-              (n8n, Python, IA) et{' '}
+              {t('hero.intro.automationTech')}{' '}
               <span className="text-white font-medium">
-                création digitale
+                {t('hero.intro.digital')}
               </span>{' '}
-              (Figma, Canva, CapCut) pour donner vie à vos projets de A à Z avec cohérence et rapidité.
+              {t('hero.intro.digitalTech')}
             </p>
 
             {/* ============== TECH STACK — 3 GROUPES ============== */}
@@ -142,16 +145,16 @@ export default function Hero() {
                     </div>
                     {/* Pills */}
                     <div className="tech-group-body">
-                      {group.items.map((t) => {
-                        const TI = t.icon
+                      {group.items.map((tech) => {
+                        const TI = tech.icon
                         return (
                           <span
-                            key={t.label}
-                            className={`tech-pill tech-pill-${t.variant}`}
-                            title={t.note}
+                            key={tech.label}
+                            className={`tech-pill tech-pill-${tech.variant}`}
+                            title={tech.note}
                           >
                             <TI className="w-[15px] h-[15px] -translate-y-[0.5px]" strokeWidth={2.1} />
-                            <span className="tracking-tight">{t.label}</span>
+                            <span className="tracking-tight">{tech.label}</span>
                           </span>
                         )
                       })}
@@ -169,7 +172,7 @@ export default function Hero() {
               >
                 <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 shimmer-line opacity-70" />
                 <span className="relative flex items-center gap-2">
-                  Voir les projets
+                  {t('hero.ctaPrimary')}
                   <ArrowRight className="w-[18px] h-[18px] transition-all duration-300 group-hover:translate-x-1" />
                 </span>
               </a>
@@ -179,8 +182,8 @@ export default function Hero() {
                 className="group btn-secondary w-full sm:w-auto relative"
               >
                 <Download className="w-[18px] h-[18px] transition-transform duration-300 group-hover:translate-y-[2px]" />
-                Télécharger CV
-                <span className="sr-only">(téléchargement direct)</span>
+                {t('hero.ctaSecondary')}
+                <span className="sr-only">{t('hero.cvDownloadSr')}</span>
               </a>
             </div>
 
@@ -222,9 +225,9 @@ export default function Hero() {
                   </div>
                   <div className="flex flex-col leading-tight">
                     <span className="text-[11px] uppercase tracking-wider font-bold text-emerald-400/90">
-                      Workflow
+                      {t('hero.workflowCard.title')}
                     </span>
-                    <span className="text-xs text-slate-400">Auto · Synthèse IA</span>
+                    <span className="text-xs text-slate-400">{t('hero.workflowCard.subtitle')}</span>
                   </div>
                 </div>
                 <div className="flex items-end justify-between mb-1.5">
@@ -232,7 +235,7 @@ export default function Hero() {
                     <div className="text-xl font-extrabold text-emerald-400 drop-shadow-[0_0_12px_rgba(16,185,129,0.5)]">
                       97%
                     </div>
-                    <div className="text-[10px] text-slate-500 -mt-0.5">gain de temps</div>
+                    <div className="text-[10px] text-slate-500 -mt-0.5">{t('hero.workflowCard.gain')}</div>
                   </div>
                   <div className="flex items-end gap-0.5 h-9">
                     {[30, 45, 38, 62, 55, 74, 92].map((h, i) => (
@@ -256,7 +259,7 @@ export default function Hero() {
                   />
                 </div>
                 <div className="flex justify-between mt-2 text-[10px] text-slate-500">
-                  <span>4 workflows actifs</span>
+                  <span>{t('hero.workflowCard.activeWorkflows')}</span>
                   <span className="text-emerald-400">+18%</span>
                 </div>
               </div>
@@ -273,10 +276,10 @@ export default function Hero() {
                     <MapPin className="w-4 h-4 text-accent-cyan" strokeWidth={2.3} />
                   </div>
                   <div className="flex flex-col leading-tight">
-                    <span className="text-xs font-bold text-white">Casablanca</span>
+                    <span className="text-xs font-bold text-white">{t('hero.locationCard.city')}</span>
                     <span className="text-[10px] text-slate-400 flex items-center gap-1">
                       <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent-emerald animate-pulse-slow" />
-                      Maroc · GMT+1 · Remote OK
+                      {t('hero.locationCard.detail')}
                     </span>
                   </div>
                 </div>
@@ -300,6 +303,7 @@ export default function Hero() {
    SOUS-COMPOSANT : Terminal + Mini Workflow n8n
    ============================================================ */
 function HeroVisualCard() {
+  const { t } = useTranslation()
   return (
     <div className="hero-visual-card rounded-[1.75rem] w-full">
       {/* Barre fenêtre macOS */}
@@ -441,22 +445,22 @@ function HeroVisualCard() {
         <div className="flex items-center gap-2 mb-3.5">
           <GitBranch className="w-3.5 h-3.5 text-accent-cyan" strokeWidth={2.2} />
           <span className="text-[11px] uppercase tracking-[0.22em] font-bold text-slate-400">
-            Pipeline n8n · Design → Build → Auto
+            {t('hero.pipeline.title')}
           </span>
           <span className="ml-auto inline-flex items-center gap-1 text-[10px] text-accent-emerald">
             <span className="w-1.5 h-1.5 rounded-full bg-accent-emerald animate-pulse-slow" />
-            En ligne
+            {t('hero.pipeline.online')}
           </span>
         </div>
 
         <div className="relative grid grid-cols-5 gap-1 items-center">
-          <WFNode accent="figma"     icon={Palette}      title="Design"   subtitle="Figma · Canva" className="col-span-1" />
+          <WFNode accent="figma"     icon={Palette}      title={t('hero.pipeline.design')}   subtitle={t('hero.pipeline.designSub')} className="col-span-1" />
           <WFArrow color="figma" />
-          <WFNode accent="blue"      icon={Code2}        title="Build"    subtitle="React · Laravel"  className="col-span-1" />
+          <WFNode accent="blue"      icon={Code2}        title={t('hero.pipeline.build')}    subtitle={t('hero.pipeline.buildSub')}  className="col-span-1" />
           <WFArrow color="blue" />
-          <WFNode accent="emerald"   icon={Workflow}     title="AI · Auto" subtitle="n8n · Gemini" highlight className="col-span-1" />
+          <WFNode accent="emerald"   icon={Workflow}     title={t('hero.pipeline.aiAuto')} subtitle={t('hero.pipeline.aiAutoSub')} highlight className="col-span-1" />
           <WFArrow color="emerald" />
-          <WFNode accent="capcut"    icon={Film}         title="Launch"   subtitle="CapCut · Media" className="col-span-1" />
+          <WFNode accent="capcut"    icon={Film}         title={t('hero.pipeline.launch')}   subtitle={t('hero.pipeline.launchSub')} className="col-span-1" />
         </div>
       </div>
     </div>

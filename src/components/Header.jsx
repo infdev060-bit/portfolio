@@ -1,17 +1,20 @@
 import { useEffect, useState } from 'react'
 import { Menu, X, MessageSquare, ChevronRight } from 'lucide-react'
-
-const navLinks = [
-  { href: '#accueil', label: 'Accueil' },
-  { href: '#competences', label: 'Compétences' },
-  { href: '#projets', label: 'Projets' },
-  { href: '#parcours', label: 'Parcours' },
-  { href: '#contact', label: 'Contact' },
-]
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Header() {
+  const { t } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const navLinks = [
+    { href: '#accueil', label: t('header.nav.home') },
+    { href: '#competences', label: t('header.nav.skills') },
+    { href: '#projets', label: t('header.nav.projects') },
+    { href: '#parcours', label: t('header.nav.career') },
+    { href: '#contact', label: t('header.nav.contact') },
+  ]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -76,16 +79,20 @@ export default function Header() {
 
         {/* CTA Desktop + Bouton Mobile */}
         <div className="flex items-center gap-3">
+          <div className="hidden md:inline-flex">
+            <LanguageSwitcher />
+          </div>
+
           <a
             href="#contact"
             className="nav-cta-pill hidden sm:inline-flex group"
           >
             <MessageSquare className="w-4 h-4 transition-transform duration-300 group-hover:rotate-12" />
-            Me Contacter
+            {t('header.contact')}
           </a>
 
           <button
-            aria-label={mobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+            aria-label={mobileMenuOpen ? t('header.menuClose') : t('header.menuOpen')}
             onClick={() => setMobileMenuOpen((v) => !v)}
             className="lg:hidden relative inline-flex items-center justify-center w-11 h-11 rounded-xl border border-white/10 bg-base-800/70 text-slate-200 hover:text-accent-cyan hover:border-accent-cyan/40 hover:bg-base-800 transition-all duration-200 active:scale-95 overflow-hidden"
           >
@@ -131,6 +138,11 @@ export default function Header() {
 
             <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-3" />
 
+            {/* Language Switcher Mobile */}
+            <div className="flex md:hidden justify-center py-1.5">
+              <LanguageSwitcher />
+            </div>
+
             <a
               href="#contact"
               onClick={closeMobile}
@@ -140,7 +152,7 @@ export default function Header() {
               }`}
             >
               <MessageSquare className="w-5 h-5" />
-              Me Contacter
+              {t('header.contact')}
             </a>
           </div>
         </div>
