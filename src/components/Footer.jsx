@@ -1,21 +1,24 @@
 import { Github, Linkedin, Heart } from 'lucide-react'
-
-const socials = [
-  {
-    icon: Github,
-    href: 'https://github.com/ElJOUNAIDI',
-    label: 'GitHub',
-    desc: 'Voir mes projets & contributions',
-  },
-  {
-    icon: Linkedin,
-    href: 'https://www.linkedin.com/in/oussama-el-jounaidi/',
-    label: 'LinkedIn',
-    desc: 'Mon parcours professionnel',
-  },
-]
+import { useTranslation } from 'react-i18next'
 
 export default function Footer() {
+  const { t } = useTranslation()
+
+  const socials = [
+    {
+      icon: Github,
+      href: 'https://github.com/ElJOUNAIDI',
+      label: 'GitHub',
+      desc: t('footer.socials.github'),
+    },
+    {
+      icon: Linkedin,
+      href: 'https://www.linkedin.com/in/oussama-el-jounaidi/',
+      label: 'LinkedIn',
+      desc: t('footer.socials.linkedin'),
+    },
+  ]
+
   return (
     <footer className="border-t border-slate-800/80 bg-base-900/70 backdrop-blur-md relative overflow-hidden">
       <div className="absolute -top-px left-1/2 -translate-x-1/2 w-[40rem] h-px bg-gradient-to-r from-transparent via-accent-cyan/40 to-transparent" aria-hidden />
@@ -42,7 +45,7 @@ export default function Footer() {
                 </span>
               </span>
               <div className="text-xs sm:text-[12.5px] text-slate-500 font-medium tracking-wide">
-                Développeur Full-Stack & Automation Specialist
+                {t('footer.role')}
               </div>
             </div>
           </div>
@@ -75,26 +78,25 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ===== LIGNE INFÉRIEURE ===== */}
         <div className="pt-6 mt-2 border-t border-slate-800/70 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-[12.5px] text-slate-500">
           <p className="font-medium tracking-wide">
-            © 2026 <span className="text-slate-400 font-semibold">Oussama El Jounaidi</span>. Tous droits réservés.
+            © 2026 <span className="text-slate-400 font-semibold">Oussama El Jounaidi</span>. {t('footer.copyright')}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
             <a
               href="#"
               className="hover:text-accent-cyan/90 hover:underline hover:underline-offset-2 transition-colors font-medium"
             >
-              Mentions légales
+              {t('footer.legal')}
             </a>
             <a
               href="#"
               className="hover:text-accent-cyan/90 hover:underline hover:underline-offset-2 transition-colors font-medium"
             >
-              Confidentialité
+              {t('footer.privacy')}
             </a>
             <span className="inline-flex items-center gap-1.5 font-medium">
-              Conçu & développé avec
+              {t('footer.madeWith')}
               <span className="relative inline-flex items-center justify-center">
                 <Heart
                   className="w-3.5 h-3.5 text-accent-emerald fill-accent-emerald/40 animate-pulse-slow"
@@ -102,7 +104,7 @@ export default function Footer() {
                 />
               </span>
               <span className="hidden sm:inline text-slate-400">
-                <span className="text-accent-emerald font-semibold">à Casablanca</span>
+                <span className="text-accent-emerald font-semibold">{t('footer.madeIn')}</span>
               </span>
             </span>
           </div>
