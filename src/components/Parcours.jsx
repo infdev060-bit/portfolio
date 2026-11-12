@@ -5,6 +5,15 @@ import { GraduationCap, Award, Briefcase, Calendar, ChevronRight, Filter, CheckC
 const timeline = [
   // ===== EXPERIENCES PROFESSIONNELLES =====
   {
+    id: 'xp-evobike-2026',
+    periodKey: 'career.items.xp-evobike-2026.period',
+    dateOrder: 202608,
+    type: 'experience',
+    icon: Briefcase,
+    tags: ['WordPress', 'React.js', 'Next.js', 'Vibe Coding / LLM', 'n8n Workflows', 'Ads (Débutant)'],
+    tagIcons: { WordPress: Globe, 'React.js': Code2, 'Next.js': Code2, 'n8n Workflows': Workflow },
+  },
+  {
     id: 'xp-auto-2026',
     year: '2026',
     dateOrder: 202600,
@@ -209,7 +218,7 @@ export default function Parcours() {
                         {/* ===== CHIP DATE + TYPE ===== */}
                         <div className={`inline-flex items-center gap-1.5 text-xs font-semibold chip chip-accent bg-base-900/60 backdrop-blur-sm ${alignLeft ? 'sm:ml-auto' : ''}`}>
                           <Calendar className="w-3 h-3" strokeWidth={2.2} />
-                          {item.year}
+                          {item.periodKey ? t(item.periodKey) : item.year}
                           <span className="mx-1 opacity-40">•</span>
                           <MetaIcon className="w-3 h-3" strokeWidth={2.2} />
                           {t(meta.shortKey)}

@@ -3,7 +3,69 @@ import { useTranslation } from 'react-i18next'
 
 const projects = [
   {
+    id: 'evobike',
+    icon: ShoppingBag,
+    pattern: '🏍️',
+    gradient: 'from-accent-cyan/35 via-amber-500/20 to-transparent',
+    stack: [
+      { label: 'WordPress', icon: Globe },
+      { label: 'WooCommerce', icon: ShoppingBag },
+      { label: 'Elementor' },
+      { label: 'PHP' },
+    ],
+    metrics: [
+      { labelKey: 'projects.metricsLabels.offer', value: 'Pièces moto', icon: ShoppingBag },
+      { labelKey: 'projects.metricsLabels.products', value: 'Équipements & accessoires', icon: Zap },
+      { labelKey: 'projects.metricsLabels.platform', value: 'WordPress · WooCommerce', icon: Globe },
+      { labelKey: 'projects.metricsLabels.market', value: 'Maroc', icon: Activity },
+    ],
+    github: null,
+    demo: 'https://evobike.ma/',
+  },
+  {
+    id: 'motonomad',
+    icon: Globe,
+    pattern: '🏞️',
+    gradient: 'from-accent-cyan/35 via-emerald-500/20 to-transparent',
+    stack: [
+      { label: 'WordPress', icon: Globe },
+      { label: 'Elementor' },
+      { label: 'UI/UX' },
+      { label: 'Multilingue' },
+    ],
+    metrics: [
+      { labelKey: 'projects.metricsLabels.service', value: 'Location de motos', icon: ShoppingBag },
+      { labelKey: 'projects.metricsLabels.experience', value: 'Visites guidées', icon: Activity },
+      { labelKey: 'projects.metricsLabels.booking', value: 'Réservation en ligne', icon: Calendar },
+      { labelKey: 'projects.metricsLabels.languages', value: 'Multilingue', icon: Globe },
+    ],
+    github: null,
+    demo: 'https://motonomad.ma/',
+  },
+  {
+    id: 'evotasks',
+    icon: Zap,
+    pattern: '✅',
+    gradient: 'from-accent-cyan/35 via-violet-500/20 to-transparent',
+    stack: [
+      { label: 'React.js', icon: Zap },
+      { label: 'Next.js', icon: Globe },
+      { label: 'Vibe Coding' },
+      { label: 'LLM', icon: Sparkles },
+      { label: 'SaaS' },
+    ],
+    metrics: [
+      { labelKey: 'projects.metricsLabels.product', value: 'Gestion de tâches', icon: Activity },
+      { labelKey: 'projects.metricsLabels.stack', value: 'React.js · Next.js', icon: Zap },
+      { labelKey: 'projects.metricsLabels.approach', value: 'Vibe Coding · LLM', icon: Sparkles },
+      { labelKey: 'projects.metricsLabels.model', value: 'SaaS', icon: Globe },
+    ],
+    github: null,
+    demo: 'https://www.evotasks.app/',
+  },
+  {
     id: 'sportbook',
+  
     icon: Calendar,
     pattern: '🏟️',
     gradient: 'from-accent-cyan/35 via-accent-blue/20 to-transparent',

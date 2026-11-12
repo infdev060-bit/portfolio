@@ -9,6 +9,7 @@ const expertisesMeta = [
     descriptionKey: 'competences.cards.web.description',
     badges: [
       { label: 'React.js' },
+      { label: 'Next.js' },
       { label: 'Laravel 10' },
       { label: 'JavaScript (ES6+)' },
       { label: 'PHP' },
@@ -41,6 +42,7 @@ const expertisesMeta = [
       { label: 'Prompt Engineering' },
       { label: 'ChatGPT / Gemini' },
       { label: 'Claude API' },
+      { label: 'Vibe Coding' },
       { label: 'CapCut', icon: Film },
       { label: 'Canva', icon: PenTool },
       { label: 'Montage Vidéo' },

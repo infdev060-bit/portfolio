@@ -176,6 +176,13 @@
       "default": "No items to display"
     },
     "items": {
+      "xp-evobike-2026": {
+        "period": "08/2026 — Present",
+        "title": "Web, AI & Automation Developer",
+        "org": "EVOBIKE.MA — Casablanca",
+        "location": "CASABLANCA",
+        "desc": "Design and overhaul of the web and e-commerce ecosystem (WordPress, React.js, Next.js via Vibe Coding). Orchestration of automation workflows with n8n and management of digital acquisition campaigns (Meta/TikTok Ads)."
+      },
       "xp-auto-2026": {
         "title": "Automation & AI — Personal Project",
         "org": "Freelance — Casablanca",

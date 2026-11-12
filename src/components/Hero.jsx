@@ -13,6 +13,7 @@ export default function Hero() {
       icon: Code2,
       items: [
         { label: 'React.js',     icon: Atom,       variant: 'react',     note: 'SPAs · Dashboards' },
+        { label: 'Next.js',      icon: Code2,      variant: 'react',     note: 'React · Framework' },
         { label: 'Laravel 10',   icon: Flame,      variant: 'laravel',   note: 'APIs · MVC'      },
         { label: 'WordPress',    icon: Globe2,     variant: 'wordpress', note: 'CMS · E-commerce'},
         { label: 'Elementor',    icon: LayoutGrid, variant: 'elementor', note: 'Page builder'    },

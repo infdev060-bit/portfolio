@@ -1,0 +1,150 @@
+{
+  "profile": {
+    "name": "Oussama El Jounaidi",
+    "title": "Développeur Web Full Stack & spécialiste en automatisation",
+    "location": "Casablanca, Maroc"
+  },
+  "skills": [
+    {
+      "category": "Développement Web Full-Stack & CMS",
+      "items": [
+        "React.js",
+        "Laravel 10",
+        "JavaScript (ES6+)",
+        "PHP",
+        "WordPress",
+        "WooCommerce",
+        "REST API"
+      ]
+    },
+    {
+      "category": "Automatisation & Workflows",
+      "items": [
+        "n8n Workflows",
+        "Python",
+        "FFmpeg",
+        "API Webhooks",
+        "Intégrations API"
+      ]
+    },
+    {
+      "category": "IA générative & création média",
+      "items": [
+        "Prompt Engineering",
+        "ChatGPT / Gemini",
+        "Claude API",
+        "Canva",
+        "Montage vidéo"
+      ]
+    },
+    {
+      "category": "Bases de données & DevOps",
+      "items": [
+        "MySQL",
+        "SQL Server",
+        "Docker",
+        "Git / GitHub",
+        "VS Code"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "sportbook",
+      "title": "SportBook — SaaS de réservation de terrains sportifs",
+      "category": "Full-Stack · SaaS B2B",
+      "problem": "Les réservations de plusieurs complexes sportifs étaient suivies dans des tableurs et des carnets, entraînant des doublons et une administration chronophage.",
+      "solution": "Plateforme SaaS multi-établissements avec planning en temps réel, paiements en ligne, API REST et tableau de bord analytique.",
+      "stack": ["Laravel 10", "React.js", "MySQL", "Sanctum", "API REST"],
+      "metrics": [
+        { "label": "Temps administratif réduit", "value": "85%" },
+        { "label": "Réservations en doublon", "value": "0" },
+        { "label": "Satisfaction client", "value": "4.8/5" }
+      ],
+      "links": {
+        "demo": null,
+        "source": "https://github.com/ElJOUNAIDI/fil_rouge"
+      }
+    },
+    {
+      "id": "mediaflow",
+      "title": "MediaFlow — Pipeline d’automatisation multimédia",
+      "category": "Automatisation · n8n · IA",
+      "problem": "La préparation et la publication de vidéos sur plusieurs plateformes prenaient environ 15 heures par semaine.",
+      "solution": "Workflow n8n avec scripts Python et FFmpeg pour générer des clips, des sous-titres et des formats adaptés à partir d’une vidéo source.",
+      "stack": ["n8n", "Python", "FFmpeg", "ChatGPT API", "Webhooks"],
+      "metrics": [
+        { "label": "Temps de publication hebdomadaire", "value": "15 h → 30 min" },
+        { "label": "Gain de temps", "value": "97%" },
+        { "label": "Contenus dérivés par vidéo", "value": "12" }
+      ],
+      "links": {
+        "demo": null,
+        "source": null
+      }
+    },
+    {
+      "id": "tantaoui",
+      "title": "Cabinet médical Dr. Tantaoui — Site et rendez-vous",
+      "category": "Web Santé · React · UI/UX",
+      "problem": "La prise de rendez-vous du cabinet se faisait uniquement par téléphone et les informations en ligne étaient limitées.",
+      "solution": "Site médical responsive avec présentation des spécialités, horaires et formulaire de contact et de prise de rendez-vous.",
+      "stack": ["React.js", "Tailwind CSS", "Responsive Design", "SEO médical"],
+      "metrics": [
+        { "label": "Rendez-vous par téléphone", "value": "-60%" },
+        { "label": "Nouveaux patients", "value": "+45%" },
+        { "label": "Score Lighthouse", "value": "98" }
+      ],
+      "links": {
+        "demo": "https://projet-fr-1.vercel.app/",
+        "source": null
+      }
+    },
+    {
+      "id": "vasycom",
+      "title": "VasyCom — Sites vitrines et e-commerce",
+      "category": "WordPress · Elementor · WooCommerce",
+      "problem": "Des sites vieillissants et une boutique peu performante limitaient les conversions et la visibilité sur Google.",
+      "solution": "Sites WordPress sur mesure avec WooCommerce, optimisation des performances, du parcours d’achat et du référencement.",
+      "stack": ["WordPress", "Elementor", "WooCommerce", "PHP", "SEO"],
+      "metrics": [
+        { "label": "Conversion après refonte", "value": "×3" },
+        { "label": "Score Lighthouse", "value": "95+" },
+        { "label": "Abandon de panier", "value": "82% → 54%" }
+      ],
+      "links": {
+        "demo": "https://vasycom.com/",
+        "source": null
+      }
+    }
+  ],
+  "career": [
+    {
+      "id": "xp-auto-2026",
+      "type": "experience",
+      "title": "Automatisation & IA — Projet personnel",
+      "organization": "Freelance — Casablanca",
+      "period": "2026",
+      "description": "Conception de workflows n8n, intégrations d’API d’IA et pipeline automatisé de création de contenus multimédias.",
+      "skills": ["n8n", "ChatGPT", "Gemini", "Python", "FFmpeg"]
+    },
+    {
+      "id": "form-simplon-2025",
+      "type": "education",
+      "title": "Développement Front-End & Back-End",
+      "organization": "Simplon Maghreb",
+      "period": "06/2025 — 11/2025",
+      "description": "Formation full-stack en React.js, Laravel, Node.js, bases de données et architecture de projets web.",
+      "skills": ["React.js", "Laravel 10", "Node.js", "Bases de données"]
+    },
+    {
+      "id": "cert-git-2023",
+      "type": "certification",
+      "title": "Gérez du code avec Git et GitHub",
+      "organization": "OpenClassrooms",
+      "period": "2023",
+      "description": "Workflow Git : branches, pull requests, collaboration, résolution de conflits et gestion de versions.",
+      "skills": ["Git", "GitHub", "Branches", "Collaboration"]
+    }
+  ]
+}
